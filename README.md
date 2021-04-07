@@ -1,4 +1,4 @@
-# Laboratory_map
+# Turtlebot2_UdG
 
 To use this package, you need all the basic drivers of turtlebot.
 
