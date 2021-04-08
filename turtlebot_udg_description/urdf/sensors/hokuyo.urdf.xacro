@@ -24,7 +24,7 @@
 	      <visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-		  <mesh filename="package://turtlebot_description/meshes/sensors/hokuyo.dae"/>
+		  <mesh filename="package://turtlebot_udg_description/meshes/sensors/hokuyo.dae"/>
 		</geometry>
 	      </visual>
 	      
