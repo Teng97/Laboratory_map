@@ -1,4 +1,4 @@
-# Turtlebot2_UdG
+# turtlebot2_udg
 
 To use this package, you need all the basic drivers of turtlebot.
 
