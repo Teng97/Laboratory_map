@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="turtlebot_udg_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- Microsoft Kinect / ASUS Xtion PRO Live for simulation -->
+  <!-- Hokuyo sensor for simulation -->
   <xacro:macro name="turtlebot_sim_laser_range_finder">
    <gazebo reference="hokuyo_link">
       <sensor type="ray" name="head_hokuyo_sensor">
