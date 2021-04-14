@@ -4,6 +4,8 @@
 	<env name="GAZEBO_MODEL_PATH" value="$(find laboratory_map)/models"/>	
 	
 	<!-- these are the arguments -->
+	<arg name="visual" value="false"/>
+	<arg name="stddev" value="0.01"/>
 	<arg name="debug" value="false"/>
 	<arg name="gui" value="true"/>
 	<arg name="paused" value="true"/>
@@ -33,6 +35,8 @@
 		<arg name="base" value="$(arg base)"/>
 		<arg name="stacks" value="$(arg stacks)"/>
 		<arg name="3d_sensor" value="$(arg 3d_sensor)"/>
+		<arg name="visual" value="$(arg visual)"/>
+		<arg name="stddev" value="$(arg stddev)"/>
 	</include>
 	
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
