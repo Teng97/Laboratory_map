@@ -42,7 +42,11 @@
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
 		<param name="publish_frequency" type="double" value="30.0" />
 	</node>
-
+	
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find laboratory_map)/rviz_config/turtlebot2_udg_config.rviz">
+		
+	</node>
+	
 	 <!-- Fake laser -->
 	  <node pkg="nodelet" type="nodelet" name="laserscan_nodelet_manager" args="manager"/>
 	  <node pkg="nodelet" type="nodelet" name="depthimage_to_laserscan"
