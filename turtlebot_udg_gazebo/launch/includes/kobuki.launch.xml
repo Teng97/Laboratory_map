@@ -6,7 +6,7 @@
   <arg name="stddev"/>
 
   <arg name="urdf_file" default="$(find xacro)/xacro '$(find turtlebot_udg_description)/robots/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'"/>
-  <param name="robot_description" command="$(arg urdf_file)"/>
+  <param name="robot_description" command="$(arg urdf_file) visual:=$(arg visual) stddev:=$(arg stddev)"/>
 
   <!-- Gazebo model spawner -->
   <node name="spawn_turtlebot_model" pkg="gazebo_ros" type="spawn_model"

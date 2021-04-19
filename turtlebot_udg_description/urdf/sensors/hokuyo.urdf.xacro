@@ -3,7 +3,7 @@
   <xacro:include filename="$(find turtlebot_udg_description)/urdf/turtlebot_udg_gazebo.urdf.xacro"/>
   <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_properties.urdf.xacro"/>
   
-	<xacro:macro name="sensor_hokuyo" params="parent">
+	<xacro:macro name="sensor_hokuyo" params="parent visual stddev">
 	
 	    <joint name="hokuyo_joint" type="fixed">
 	      <origin xyz="0.075 0 0.43" rpy="0 0 0"/>
@@ -36,6 +36,6 @@
 	    </link>
 	     
 	     <!-- Hokuyo sensor for simulation -->
-	     <xacro:turtlebot_sim_laser_range_finder/>
+	     <xacro:turtlebot_sim_laser_range_finder visual="$(arg visual)" stddev="$(arg stddev)"/>
 	</xacro:macro>
 </robot>
