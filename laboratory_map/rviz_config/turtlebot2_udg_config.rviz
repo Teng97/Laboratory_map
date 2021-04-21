@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /MarkerArray1
       Splitter Ratio: 0.5
     Tree Height: 355
   - Class: rviz/Selection
@@ -93,6 +94,7 @@ Visualization Manager:
       Visibility:
         Grid: true
         LaserScan: true
+        MarkerArray: true
         RobotModel: true
         Value: true
       Zoom Factor: 1
@@ -278,6 +280,14 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /lines_marker
+      Name: MarkerArray
+      Namespaces:
+        hokuyo_markers: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -306,7 +316,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.254276275634766
+      Distance: 13.767125129699707
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -322,9 +332,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 1.135398030281067
       Target Frame: <Fixed Frame>
-      Yaw: 0.785398006439209
+      Yaw: 1.0003981590270996
     Saved: ~
 Window Geometry:
   Camera:
@@ -345,4 +355,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 675
-  Y: 61
+  Y: 27
