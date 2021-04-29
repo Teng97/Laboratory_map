@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /MarkerArray1
+        - /Marker1
       Splitter Ratio: 0.5
     Tree Height: 355
   - Class: rviz/Selection
@@ -76,7 +76,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /hokuyo_scan
+      Topic: /scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -94,7 +94,7 @@ Visualization Manager:
       Visibility:
         Grid: true
         LaserScan: true
-        MarkerArray: true
+        Marker: true
         RobotModel: true
         Value: true
       Zoom Factor: 1
@@ -280,10 +280,10 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/MarkerArray
+    - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /lines_marker
-      Name: MarkerArray
+      Marker Topic: /marker_lines
+      Name: Marker
       Namespaces:
         hokuyo_markers: true
       Queue Size: 100
