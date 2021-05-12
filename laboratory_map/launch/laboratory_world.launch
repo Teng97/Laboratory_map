@@ -15,7 +15,6 @@
   	<arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>  <!-- /proc/acpi/battery/BAT0 -->
   	<arg name="stacks"     value="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
   	
-	<!-- change the kinect camera to the hokuyo laser -->
   	<!--<arg name="3d_sensor"  value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  --> <!-- kinect, asus_xtion_pro -->
 	
 	<arg name="3d_sensor"  default="hokuyo"/>
@@ -43,8 +42,8 @@
 		<arg name="stddev" value="$(arg stddev)"/>
 	</include>
 	
-	<include file="$(find marker_values)/launch/marker_values_gazebo.launch">
-	
+	<include file="$(find marker_values)/launch/marker_values.launch">
+		<arg name="simulator" default="true"/>
 	</include>
 	
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
