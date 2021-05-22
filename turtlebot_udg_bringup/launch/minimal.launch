@@ -28,4 +28,12 @@
     <arg name="battery" value="$(arg battery)" />
   </include>
   
+  <!-- Hokuyo launch-->
+  <include file="$(find urg_node)/launch/urg_lidar.launch"/>
+  
+  <!-- Kinect launch-->
+  <include file="$(find openni_launch)/launch/openni.launch"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="camera_tf_broadcaster" args="-0.08 0 0.275 0 0 0 1 base_link camera_link 100"/>
+  
 </launch>
