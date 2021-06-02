@@ -42,7 +42,7 @@
 		<arg name="stddev" value="$(arg stddev)"/>
 	</include>
 	
-	<include file="$(find marker_values)/launch/marker_values.launch">
+	<include file="$(find split_and_merge)/launch/split_and_merge.launch">
 		<arg name="simulator" default="true"/>
 	</include>
 	

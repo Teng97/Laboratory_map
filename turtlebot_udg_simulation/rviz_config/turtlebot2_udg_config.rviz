@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Marker1
       Splitter Ratio: 0.5
     Tree Height: 355
   - Class: rviz/Selection
@@ -264,7 +265,7 @@ Visualization Manager:
       Visual Enabled: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /marker_lines
+      Marker Topic: /lines
       Name: Marker
       Namespaces:
         hokuyo_markers: true
