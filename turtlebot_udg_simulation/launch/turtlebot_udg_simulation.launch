@@ -25,6 +25,9 @@
 	<!-- This argument is used to define the standard deviation of noise of hokuyo laser -->
 	<arg name="stddev" value="0.01"/>
 	
+	<!-- Use rviz with custom config from external package, default use rviz with custom config from this package -->
+	<arg name="external_rviz_config"   default="false"/>
+	
 	<!-- world file -->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg name="world_name" value="$(arg world)"/>
@@ -34,6 +37,7 @@
 		<arg name="use_sim_time" value="$(arg use_sim_time)"/>
 	</include>
 	
+	<!-- gazebo-->
 	<include file="$(find turtlebot_udg_gazebo)/launch/includes/$(arg base).launch.xml">
 		<arg name="base" value="$(arg base)"/>
 		<arg name="stacks" value="$(arg stacks)"/>
@@ -42,6 +46,7 @@
 		<arg name="stddev" value="$(arg stddev)"/>
 	</include>
 	
+	<!-- Split and Merge node-->
 	<include file="$(find split_and_merge)/launch/split_and_merge.launch">
 		<arg name="simulator" default="true"/>
 	</include>
@@ -50,9 +55,11 @@
 		<param name="publish_frequency" type="double" value="30.0" />
 	</node>
 	
-	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find turtlebot_udg_simulation)/rviz_config/turtlebot2_udg_config.rviz">
+	<!-- Rviz -->
+	<group unless="$(arg external_rviz_config)">
+	    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find turtlebot_udg_simulation)/rviz_config/turtlebot2_udg_config.rviz"/>
 		
-	</node>
+	</group>
 	
 	 <!-- Fake laser -->
 	  <node pkg="nodelet" type="nodelet" name="laserscan_nodelet_manager" args="manager"/>
