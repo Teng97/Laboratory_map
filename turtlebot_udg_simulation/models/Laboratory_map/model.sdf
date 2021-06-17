@@ -2,7 +2,7 @@
 <sdf version='1.7'>
   <model name='Laboratory_map'>
     <link name='Wall_0'>
-      <pose>3 2.1 -0 0 -0 0</pose>
+      <pose>3.2 2.1 0 0 -0 0</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -102,7 +102,7 @@
       </collision>
     </link>
     <link name='Wall_13'>
-      <pose>-5.75 -0 0 0 0 -1.5708</pose>
+      <pose>-5.55 -0 -0 0 0 -1.5708</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -202,7 +202,7 @@
       </collision>
     </link>
     <link name='Wall_19'>
-      <pose>-0.625 -5.25 -0 0 -0 0</pose>
+      <pose>-0.425 -5.25 0 0 -0 0</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -302,7 +302,7 @@
       </collision>
     </link>
     <link name='Wall_21'>
-      <pose>4.5 0 -0 0 0 -1.5708</pose>
+      <pose>4.7 0 0 0 0 -1.5708</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -402,7 +402,7 @@
       </collision>
     </link>
     <link name='Wall_23'>
-      <pose>1.62 0.75 0 0 -0 1.5708</pose>
+      <pose>1.82 0.75 0 0 -0 1.5708</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -502,7 +502,7 @@
       </collision>
     </link>
     <link name='Wall_3'>
-      <pose>3 -0.16 0 0 -0 0</pose>
+      <pose>3.2 -0.16 0 0 -0 0</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -602,7 +602,7 @@
       </collision>
     </link>
     <link name='Wall_6'>
-      <pose>-0.625 5.25 0 0 -0 3.14159</pose>
+      <pose>-0.425 5.25 -0 0 -0 3.14159</pose>
       <self_collide>0</self_collide>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -714,7 +714,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>4.2 4.6 0.5 0 -0 0</pose>
+      <pose>4.4 4.6 0.5 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -812,7 +812,7 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>3.1 0.84 0.5 0 -0 0</pose>
+      <pose>3.25 1.1 0.5 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
