@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
+	<!-- Load the params -->
+	<rosparam command="load" file="$(find turtlebot_udg_simulation)/params/config.yaml" />
+	
+	<!-- Laboratory model path -->
 	<env name="GAZEBO_MODEL_PATH" value="$(find turtlebot_udg_simulation)/models"/>	
 	
 	<!-- these are the arguments -->
@@ -50,6 +54,7 @@
 	<include file="$(find split_and_merge)/launch/split_and_merge.launch">
 		<arg name="simulator" default="true"/>
 	</include>
+	
 	
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
 		<param name="publish_frequency" type="double" value="30.0" />
