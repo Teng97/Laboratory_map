@@ -7,9 +7,15 @@ import tf
 
 #===============================================================================
 class AddNoise(object):
-
+    '''
+    Class that adds gaussian noise to the odometry and publishes it.
+    '''
+    
     #===========================================================================
     def __init__(self):
+        '''
+        Initializes publishers and subscribers.
+        '''
 
         self.sub = rospy.Subscriber("/odom", Odometry, self.callback)
         self.pub_odom = rospy.Publisher("/new_odom", Odometry, queue_size = 1)
@@ -35,7 +41,10 @@ class AddNoise(object):
     
     #===========================================================================
     def callback(self,msg):
-        
+        """
+        Publishes the odometry of the robot with gaussian noise.
+
+        """
         # Add Gaussian noise to odometry
         
         noise_x = np.random.randn(1)
