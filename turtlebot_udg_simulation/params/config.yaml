@@ -1,0 +1,2 @@
+odom_lin_sigma: 0.01
+odom_ang_sigma: 0.5
