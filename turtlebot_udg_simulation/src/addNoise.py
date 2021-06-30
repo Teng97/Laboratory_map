@@ -12,7 +12,7 @@ class AddNoise(object):
     '''
     
     #===========================================================================
-    def __init__(self):
+    def __init__(self,lin_noise,ang_noise):
         '''
         Initializes publishers and subscribers.
         '''
@@ -20,9 +20,8 @@ class AddNoise(object):
         self.sub = rospy.Subscriber("/odom", Odometry, self.callback)
         self.pub_odom = rospy.Publisher("/new_odom", Odometry, queue_size = 1)
         
-        self.odom_lin_sigma = rospy.get_param('odom_lin_sigma')
-        self.odom_ang_sigma = np.deg2rad(rospy.get_param('odom_ang_sigma'))
-
+        self.odom_lin_sigma = lin_noise
+        self.odom_ang_sigma = ang_noise
     
     #===========================================================================    
     def angle_wrap(self,ang):
@@ -60,7 +59,18 @@ class AddNoise(object):
             
                      
 if __name__ == '__main__':
+    
+    if rospy.has_param("lin_noise"):
+        lin_noise = rospy.get_param('lin_noise')
+    else:
+        lin_noise = 0.025
+        
+    if rospy.has_param("ang_noise"):    
+        ang_noise = np.deg2rad(rospy.get_param('ang_noise'))
+    else:
+        ang_noise = np.deg2rad(2)
+    
     # ROS init
     rospy.init_node('noisy_odometry', anonymous=True)
-    node = AddNoise()
+    node = AddNoise(lin_noise,ang_noise)
     rospy.spin()
