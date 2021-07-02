@@ -1,2 +1,2 @@
-lin_noise: 0.01
-ang_noise: 0.5
+lin_noise: 0.05
+ang_noise: 5
