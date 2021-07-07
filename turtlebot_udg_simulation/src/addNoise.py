@@ -12,7 +12,7 @@ class AddNoise(object):
     '''
     
     #===========================================================================
-    def __init__(self,lin_noise,ang_noise):
+    def __init__(self,lin_noise = 0.05,ang_noise = np.deg2rad(5)):
         '''
         Initializes publishers and subscribers.
         '''
@@ -63,12 +63,12 @@ if __name__ == '__main__':
     if rospy.has_param("lin_noise"):
         lin_noise = rospy.get_param('lin_noise')
     else:
-        lin_noise = 0.025
+        lin_noise = 0.05
         
     if rospy.has_param("ang_noise"):    
         ang_noise = np.deg2rad(rospy.get_param('ang_noise'))
     else:
-        ang_noise = np.deg2rad(2)
+        ang_noise = np.deg2rad(5)
     
     # ROS init
     rospy.init_node('noisy_odometry', anonymous=True)
